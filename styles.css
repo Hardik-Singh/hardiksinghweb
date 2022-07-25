@@ -1,3 +1,8 @@
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 * {
   font-family: 'Lato', sans-serif;
@@ -18,6 +23,10 @@ h1, h2, h3, h4, h5, h6, span {
 
 h1 {
   font-size: 36px;
+}
+
+.column{
+  flex:50%
 }
 
 p {
@@ -343,6 +352,23 @@ blockquote{
   justify-content: center;
 }
 
+.work__description--title{
+  color:white;
+  text-align: left;
+  line-height: 80px;
+}
+
+.work__description--tech{
+  color:white;
+  text-align: left;
+  line-height: 25px;
+}
+
+.work__description--sub-title{
+  color:white;
+  text-align: left;
+}
+
 .work:hover .work__image {
   transform: scale(1.07);
   filter: blur(5px);
@@ -544,6 +570,7 @@ footer {
 .footer__copyright,
 .footer__logo--popper {
   color: #fff;
+  margin-bottom: 10px;
 }
 
 .footer__logo--popper {
