@@ -105,6 +105,7 @@ section {
   display: inline-block;
   font-size: 80px;
   animation: animate-wave 1000ms infinite ease;
+  margin-bottom: 10px;
 }
 
 @keyframes animate-wave{
