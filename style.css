@@ -653,7 +653,7 @@ WORK
   /* opacity: 0; */
   position: absolute;
   transition: opacity 300ms, transform 300ms ease;
-  top: 20%;
+  top: 10%;
   left: 30px;
   color: white;
   max-width: 550px;
@@ -665,12 +665,24 @@ WORK
   transform: translateX(110%);
 }
 
+.work__description--top {
+  position: absolute;
+  opacity: 1;
+  transform: translateY(130%);
+}
+
 .work__description--left {
   position: absolute;
   transform: translateX(-110%);
 }
 
 .work__image {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all 600ms ease;
+}
+
+.work__image__jdf {
   width: 100%;
   transform: scale(0.9);
   transition: all 600ms ease;
@@ -1002,4 +1014,3 @@ SHPAES
     padding: 40px;
   }
 }
-
