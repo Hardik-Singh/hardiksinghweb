@@ -91,3 +91,32 @@ function checkVisible(elm, eval){
     if (eval == "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
     if (eval == "above") return ((y < (vpH + st)));
 }
+
+
+
+const NAMESPACE = 'hardiksingh';
+const KEY = 'visits';
+
+function formatNumber(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+async function updateVisits() {
+    try {
+      const response = await fetch('https://api.countapi.xyz/hit/hardik-portfolio/visits');
+      const data = await response.json();
+      const visitsElement = document.getElementById('visits');
+      if (visitsElement) {
+        visitsElement.textContent = data.value.toLocaleString();
+      }
+    } catch (error) {
+      console.error('Error updating visit counter:', error);
+      const visitsElement = document.getElementById('visits');
+      if (visitsElement) {
+        visitsElement.textContent = 'Error loading';
+      }
+    }
+  }
+  
+  // Call updateVisits when the page loads
+  document.addEventListener('DOMContentLoaded', updateVisits);
