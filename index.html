@@ -26,6 +26,40 @@
 </head>
 
 <body>
+  <section id="featured-projects" style="background: #111; color: #fff; padding: 48px 0 32px 0;">
+    <div class="container">
+      <h2 class="section__title" style="color: #fff;">Featured Projects</h2>
+      <div class="project__list" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center;">
+        <div class="project__card" style="background: #222; border-radius: 16px; padding: 32px; max-width: 400px; min-width: 320px; flex: 1 1 320px; box-shadow: 0 2px 16px #0002;">
+          <h3 class="project__description--title" style="color: #fff;">Low-Latency Trading Exchange</h3>
+          <h4 class="project__description--sub-title" style="color: #bbb;">C++, Python, Boost.Asio, pybind11, QuantLib, spdlog</h4>
+          <div style="height: 160px; background: #000; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #444; font-size: 2rem;">Trading</div>
+          <ul style="color: #eee;">
+            <li>Engineered a C++ trading platform with async networking, lock-free queues, and DPDK kernel bypass, achieving 5,000+ orders/sec and sub-millisecond latency on Apple M2.</li>
+            <li>Built a custom order book using binary heaps and memory pooling for consistent, ultra-fast execution in simulated trading workloads.</li>
+          </ul>
+        </div>
+        <div class="project__card" style="background: #222; border-radius: 16px; padding: 32px; max-width: 400px; min-width: 320px; flex: 1 1 320px; box-shadow: 0 2px 16px #0002;">
+          <h3 class="project__description--title" style="color: #fff;">Options Pricing Model</h3>
+          <h4 class="project__description--sub-title" style="color: #bbb;">Python, C++, pybind11, Eigen, Accelerate</h4>
+          <div style="height: 160px; background: #000; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #444; font-size: 2rem;">Options</div>
+          <ul style="color: #eee;">
+            <li>Developed a Python research framework with a C++ backend for Black-Scholes pricing, enabling 100× speedup and vectorized Greeks for 500,000+ options/sec.</li>
+            <li>Integrated a C++ order matching core for microsecond-level trade simulation and multi-asset PnL evaluation, plus time series models (GARCH, ARIMA) for volatility forecasting.</li>
+          </ul>
+        </div>
+        <div class="project__card" style="background: #222; border-radius: 16px; padding: 32px; max-width: 400px; min-width: 320px; flex: 1 1 320px; box-shadow: 0 2px 16px #0002;">
+          <h3 class="project__description--title" style="color: #fff;">Poker Bot</h3>
+          <h4 class="project__description--sub-title" style="color: #bbb;">Rust, Python, NumPy, PyTorch</h4>
+          <div style="height: 160px; background: #000; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #444; font-size: 2rem;">Poker</div>
+          <ul style="color: #eee;">
+            <li>Created a Rust-based poker engine with Monte Carlo rollouts and PyTorch RL agents, supporting 8,000+ rollouts/sec for strategy inference in adversarial markets.</li>
+            <li>Built async human-bot gameplay and a multi-agent tournament framework, validating 7+ RL models with deterministic Rust test harnesses.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="landing-page" onmousemove="moveBackground(event)">
     <div class="shapes__wrapper">
       <img src="./assets/shapes/semi circle.svg" class="shape shape--1">
@@ -86,7 +120,7 @@
             <a href="https://github.com/Hardik-Singh" class="social__link click" target="_blank"><i
                 class="fa-brands fa-github"></i>
             </a>
-            <a href="./assets/Hardik_Singh_resume.pdf" class="social__link click" target="_blank"><i
+            <a href="./assets/Hardik_resume_quant.pdf" class="social__link click" target="_blank"><i
                 class="fas fa-file-pdf"></i>
             </a>
           </div>
@@ -208,91 +242,51 @@
 
 
 
-  <section id="work">
-    <div class="container">
-      <div class="row">
-        <h1 class="section__title">
-          My <span class="secondary-color">work experience</span>
-        </h1>
-        <ul class="work__list">
-
-
-          <li class="work">
-            <div class="work__wrapper">
-              <img src="./assets/file.png" width: 2000px height: 1500px class="work__image__jdf" alt="" />
-
-              <div class="work__wrapper--bg"></div>
-              <div class="work__description work__description--left">
-                <h3 class="work__description--title">John Deere Financial</h3>
-                <h4 class="work__description--sub-title">
-                  Software Engineering Intern
-                </h4>
-                <h5 class="work__description--tech">
-                  AWS ECS, Lambda, FastAPI, GraphQL, React, Terraform, Maven, Jenkins, Docker
-                </h5>
-                <p class="work__description--para">
-                  Implemented business feature within ECS instances and Lambdas, and developed a REST API using Python,
-                  FastAPI, and GraphQL to query New Relic and display log info as dashboards.
-                </p>
-
-                <div class="work__description--link">
-                  <a href="./assets/Hardik_Singh_resume.pdf" class="project__description--link" target="_blank"><i
-                      class="fas fa-file-pdf"></i>
-                  </a>
-                  </dic>
-                </div>
-              </div>
-          </li>
-          <li class="work">
-            <div class="work__wrapper">
-              <img src="./assets/work/crestron.png
-                      " class="work__image" alt="" />
-
-              <div class="work__wrapper--bg"></div>
-              <div class="work__description work__description--top">
-                <h3 class="work__description--title">Crestron Electronics</h3>
-                <h4 class="work__description--sub-title">
-                  Software Engineering Intern
-                </h4>
-                <h5 class="work__description--tech">Python, Tensorflow, C#, Unittest, Numpy, OpenCV</h5>
-                <p class="work__description--para">
-                  Developed an automation frameowork that utilizes Crestron Devices to test drivers for devices. Paired
-                  it with a machine-learning algorithm
-                  to ensure the drivers are working as intended.
-                </p>
-                <a href="./assets/Hardik_Singh_resume.pdf" class="project__description--link" target="_blank"><i
-                    class="fas fa-file-pdf"></i>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="work">
-            <div class="work__wrapper">
-              <img src="./assets/infiniwell_circle.png" width: 1800px height: 800px class="work__image" alt="" />
-
-              <div class="work__wrapper--bg"></div>
-              <div class="work__description work__description--right">
-                <h3 class="work__description--title">Infiniwell AI</h3>
-                <h4 class="work__description--sub-title">
-                  Software Development Intern
-                </h4>
-                <h5 class="work__description--tech">
-                  Azure, Apache Kafka, React, React Native, Javascript, HTML, CSS
-                </h5>
-                <p class="work__description--para">
-                  Developed an app for hospitals to track patient's medical information and communicate with them, with
-                  a system that automatically flags unusual vitals
-                </p>
-
-                <div class="work__description--link">
-                  <a href="./assets/Hardik_Singh_resume.pdf" class="project__description--link" target="_blank"><i
-                      class="fas fa-file-pdf"></i>
-                  </a>
-                  </dic>
-                </div>
-              </div>
-          </li>
-        </ul>
+  <section id="work-experience">
+    <h2 class="section__title">My <span class="secondary-color">work experience</span></h2>
+    <div class="work__list">
+      <div class="work__item">
+        <img src="./assets/google.png" alt="Google Logo" class="work__logo" style="background: #fff; border-radius: 8px; width: 60px; height: 60px; object-fit: contain;"/>
+        <div class="work__details">
+          <h3 class="work__title">Incoming Software Engineering Intern</h3>
+          <h4 class="work__company">Google, Seattle, WA <span class="work__date">Aug 2025 – Nov 2025</span></h4>
+          <ul class="work__bullets">
+            <li>Will contribute to core systems development for Fuchsia OS in Rust, focusing on OS internals.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="work__item">
+        <img src="./assets/work/amazon.png" alt="Amazon Logo" class="work__logo" style="background: #fff; border-radius: 8px; width: 60px; height: 60px; object-fit: contain;"/>
+        <div class="work__details">
+          <h3 class="work__title">Software Development Intern</h3>
+          <h4 class="work__company">Amazon Web Services, Seattle, WA <span class="work__date">May 2025 – Aug 2025</span></h4>
+          <ul class="work__bullets">
+            <li>Added raw query string support to CloudFront (CF) Functions by updating NGINX/Quickstep servers with FlatBuffer schema and serialization changes to meet Fortune 100 client requirements for migration.</li>
+            <li>Enhanced Rust-based string parsing for CloudFront Functions using byte-level libraries, achieving 46% faster processing across 700+ edge locations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="work__item">
+        <img src="./assets/work/jdfpng.png" alt="John Deere Financial Logo" class="work__logo" style="background: #fff; border-radius: 8px; width: 60px; height: 60px; object-fit: contain;"/>
+        <div class="work__details">
+          <h3 class="work__title">Software Engineering Intern</h3>
+          <h4 class="work__company">John Deere Financial, Des Moines, IA <span class="work__date">May 2024 – Aug 2024</span></h4>
+          <ul class="work__bullets">
+            <li>Designed a high-performance REST API with Python, FastAPI, and GraphQL to stream over 12 million telemetry data points from New Relic via AWS Kinesis; deployed using Terraform.</li>
+            <li>Developed lightweight Java classes using Spring and Maven to implement structured JSON logging and traceability in AWS Lambda and ECS pipelines, efficiently capturing over 1M daily logs with 0.32% performance overhead.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="work__item">
+        <img src="./assets/work/crestron.png" alt="Crestron Logo" class="work__logo" style="background: #fff; border-radius: 8px; width: 60px; height: 60px; object-fit: contain;"/>
+        <div class="work__details">
+          <h3 class="work__title">Software Engineering Intern</h3>
+          <h4 class="work__company">Crestron Electronics, Plano, TX <span class="work__date">May 2022 – Aug 2022</span></h4>
+          <ul class="work__bullets">
+            <li>Developed C++ libraries for automated control of Crestron DSP and control systems, enabling direct hardware interfacing and eliminating repetitive command execution across 30+ devices.</li>
+            <li>Built a TensorFlow-based object detection pipeline to automate audiovisual device testing, improving validation speed by 330%.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -562,6 +556,25 @@
     </div>
   </section>
 
+  <section id="education-skills">
+    <div class="container">
+      <h2 class="section__title">Education</h2>
+      <div class="education__item">
+        <h3 class="education__school">University of Texas at Austin</h3>
+        <h4 class="education__degree">B.S. in Computer Science, Minor in Business</h4>
+        <div class="education__date">Aug 2023 – May 2027</div>
+        <div class="education__courses"><b>Relevant Coursework:</b> Linear Algebra, Operating Systems, Probability & Stats, Algorithms, Differential Equations</div>
+      </div>
+      <h2 class="section__title" style="margin-top: 2em;">Technical Skills</h2>
+      <div class="skills__list">
+        <div><b>Languages:</b> Rust, C++, C, Python, Java, SQL, Go, JavaScript, TypeScript, R, HTML/CSS</div>
+        <div><b>Frameworks:</b> Spring, React, Node.js, React-Native, FastAPI, Terraform, Django, Express</div>
+        <div><b>Developer Tools:</b> AWS, Azure, Apache, Docker, Kubernetes, PyCharm, IntelliJ, Git, Jira, VS Code, Expo</div>
+        <div><b>Libraries:</b> OpenCV, TensorFlow, Pandas, NumPy, Matplotlib, SciPy, PyTorch, Keras</div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <div class="row footer__row">
@@ -579,7 +592,7 @@
           <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" onclick="toggleModal()">
             Email
           </a>
-          <a href="./assets/Hardik_Singh_resume.pdf" target="_blank"
+          <a href="./assets/Hardik_resume_quant.pdf" target="_blank"
             class="footer__social--link link__hover-effect link__hover-effect--white">
             Resume
           </a>
