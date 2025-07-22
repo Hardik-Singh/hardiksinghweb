@@ -27,9 +27,25 @@
 
 <body style="background: #111; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Roboto', sans-serif;">
   <div style="text-align: center;">
-    <img src="./assets/chaos.png" alt="Under Construction" style="width: 120px; margin-bottom: 32px; filter: grayscale(1) brightness(0.8);">
+    <div class="spinner" style="margin: 0 auto 32px auto;"></div>
     <h1 style="font-size: 3rem; margin-bottom: 16px;">Website Under Construction</h1>
     <p style="font-size: 1.5rem; color: #bbb;">Check back soon for something awesome!</p>
   </div>
+  <style>
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 8px solid #333;
+      border-top: 8px solid #c537a6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </body>
 </html>
