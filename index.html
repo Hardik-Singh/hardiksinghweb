@@ -1,51 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hardik Singh</title>
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="./assets/logo.png">
-  <script src="app.js" defer></script>
-  <script src="https://kit.fontawesome.com/10a73d7bfa.js" crossorigin="anonymous"></script>
-
-  <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-  <!-- email -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("pDlKgbHRQ6pawlQE9");
-    })();
-  </script>
-</head>
-
-<body style="background: #111; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Roboto', sans-serif;">
-  <div style="text-align: center;">
-    <div class="spinner" style="margin: 0 auto 32px auto;"></div>
-    <h1 style="font-size: 3rem; margin-bottom: 16px;">Website Under Construction</h1>
-    <p style="font-size: 1.5rem; color: #bbb;">Check back soon for something awesome!</p>
-  </div>
-  <style>
-    .spinner {
-      width: 80px;
-      height: 80px;
-      border: 8px solid #333;
-      border-top: 8px solid #c537a6;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 32px;
-      display: inline-block;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardik Singh | Software Engineer</title>
+    <meta name="description" content="Software Engineer crafting thoughtful digital experiences with the philosophy of Ma - the beauty of negative space." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10a73d7bfa.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
