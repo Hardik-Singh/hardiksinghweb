@@ -76,21 +76,11 @@ const Hero = () => {
             Software Engineer & Full-Stack Developer
           </motion.h2>
 
-          <motion.p
-            className="hero-description"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            Crafting thoughtful digital experiences with the philosophy of Ma -
-            the beauty of negative space.
-          </motion.p>
-
           <motion.div
             className="hero-buttons"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.a
               href="#projects"
@@ -125,50 +115,12 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="ensou-container">
-            <svg
-              className="ensou-svg"
-              viewBox="0 0 200 200"
-              width="250"
-              height="250"
-            >
-              <defs>
-                <linearGradient id="inkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#1A1A1A" stopOpacity="0.9" />
-                  <stop offset="50%" stopColor="#4A4A4A" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0.4" />
-                </linearGradient>
-                <filter id="brushTexture">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
-                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
-                </filter>
-              </defs>
-              <motion.path
-                d="M100,20 A80,80 0 1,1 40,140"
-                stroke="url(#inkGradient)"
-                strokeWidth="6"
-                fill="none"
-                strokeLinecap="round"
-                filter="url(#brushTexture)"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                transition={{
-                  duration: 2.5,
-                  ease: "easeOut",
-                  delay: 0.5
-                }}
-              />
-              {/* Small accent dot at the end */}
-              <motion.circle
-                cx="40"
-                cy="140"
-                r="4"
-                fill="#F4A7B9"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 0.8 }}
-                transition={{ delay: 2.8, duration: 0.3 }}
-              />
-            </svg>
+          <div className="hero-profile-container">
+            <img
+              src="/assets/pfp.jpg"
+              alt="Hardik Singh"
+              className="hero-profile-image"
+            />
           </div>
         </motion.div>
       </div>

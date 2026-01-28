@@ -396,6 +396,28 @@ body {
   align-items: center;
 }
 
+/* Hero Profile Image */
+.hero-profile-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--sakura);
+}
+
+.hero-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-profile-container:hover .hero-profile-image {
+  transform: scale(1.05);
+}
+
 /* Ensou Circle (Replaces 3D Cube) */
 .ensou-container {
   position: relative;
@@ -453,6 +475,39 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* About section - Photo at top */
+.about-image-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.about-image-top .image-container {
+  max-width: 300px;
+}
+
+/* About section - Two column layout */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.about-skills {
+  background: var(--bg-tertiary);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
 }
 
 .about-content {
@@ -642,6 +697,28 @@ body {
   transform: scale(1.1);
 }
 
+/* Project colored backgrounds */
+.project-color-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.private-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
 .project-overlay {
   position: absolute;
   top: 0;
@@ -715,6 +792,18 @@ body {
 .writing {
   padding: 6rem 0;
   background: var(--bg-secondary);
+}
+
+.writing-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.coming-soon {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* Experience Section */
@@ -807,6 +896,33 @@ body {
   height: 4px;
   background: var(--sakura);
   border-radius: 50%;
+}
+
+.experience-summary {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.expand-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--sakura);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.expand-toggle:hover {
+  background: var(--sakura);
+  color: white;
+  border-color: var(--sakura);
 }
 
 .experience-tech {
@@ -1133,6 +1249,11 @@ body {
   }
 
   .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-content-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }

@@ -5,13 +5,15 @@ const Footer = () => {
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#contact', label: 'Contact' },
+    { href: '/assets/resume.pdf', label: 'Resume', isDownload: true }
   ];
 
   const socialLinks = [
     { icon: 'fab fa-github', href: '#' },
     { icon: 'fab fa-linkedin', href: '#' },
-    { icon: 'fab fa-twitter', href: '#' }
+    { icon: 'fab fa-twitter', href: '#' },
+    { icon: 'fas fa-file-download', href: '/assets/resume.pdf', isDownload: true }
   ];
 
   const scrollToSection = (href: string) => {
@@ -44,9 +46,10 @@ const Footer = () => {
           <div className="footer-links">
             {footerLinks.map((link, index) => (
               <motion.a
-                key={link.href}
+                key={link.href + link.label}
                 href={link.href}
-                onClick={(e) => {
+                download={link.isDownload ? 'Hardik_Singh_Resume.pdf' : undefined}
+                onClick={link.isDownload ? undefined : (e) => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
@@ -66,6 +69,8 @@ const Footer = () => {
               <motion.a
                 key={social.icon}
                 href={social.href}
+                download={social.isDownload ? 'Hardik_Singh_Resume.pdf' : undefined}
+                title={social.isDownload ? 'Download Resume' : undefined}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
@@ -86,7 +91,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <p>&copy; 2024 Hardik Singh. All rights reserved.</p>
+          <p>&copy; 2026 Hardik Singh. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
