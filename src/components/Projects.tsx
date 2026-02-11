@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -103,31 +104,33 @@ const Projects = () => {
                 {project.isPrivate && (
                   <span className="private-badge">Private</span>
                 )}
-                <motion.div
-                  className="project-overlay"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="project-links">
-                    <motion.a
-                      href="#"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <i className="fas fa-external-link-alt"></i>
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <i className="fab fa-github"></i>
-                    </motion.a>
-                  </div>
-                </motion.div>
+                {!project.isPrivate && (
+                  <motion.div
+                    className="project-overlay"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="project-links">
+                      <motion.a
+                        href="#"
+                        className="project-link"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <ExternalLink size={20} />
+                      </motion.a>
+                      <motion.a
+                        href="#"
+                        className="project-link"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Github size={20} />
+                      </motion.a>
+                    </div>
+                  </motion.div>
+                )}
               </div>
 
               <div className="project-content">

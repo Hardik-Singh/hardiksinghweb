@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Github, Linkedin, Twitter, Download } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = [
@@ -10,10 +11,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: 'fab fa-github', href: '#' },
-    { icon: 'fab fa-linkedin', href: '#' },
-    { icon: 'fab fa-twitter', href: '#' },
-    { icon: 'fas fa-file-download', href: '/assets/resume.pdf', isDownload: true }
+    { icon: Github, href: '#' },
+    { icon: Linkedin, href: '#' },
+    { icon: Twitter, href: '#' },
+    { icon: Download, href: '/assets/resume.pdf', isDownload: true }
   ];
 
   const scrollToSection = (href: string) => {
@@ -67,7 +68,7 @@ const Footer = () => {
           <div className="footer-social">
             {socialLinks.map((social, index) => (
               <motion.a
-                key={social.icon}
+                key={index}
                 href={social.href}
                 download={social.isDownload ? 'Hardik_Singh_Resume.pdf' : undefined}
                 title={social.isDownload ? 'Download Resume' : undefined}
@@ -78,7 +79,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className={social.icon}></i>
+                <social.icon size={18} />
               </motion.a>
             ))}
           </div>

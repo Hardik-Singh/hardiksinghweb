@@ -1080,10 +1080,11 @@ body {
   box-shadow: var(--shadow-warm);
 }
 
-.contact-item i {
-  font-size: 1.5rem;
+.contact-item svg {
   color: var(--sakura);
-  width: 30px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .contact-item span {

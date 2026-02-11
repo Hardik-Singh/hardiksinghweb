@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,15 +34,15 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: 'fas fa-envelope',
+      icon: Mail,
       text: 'hardik.singh@example.com'
     },
     {
-      icon: 'fab fa-linkedin',
+      icon: Linkedin,
       text: 'linkedin.com/in/hardiksingh'
     },
     {
-      icon: 'fab fa-github',
+      icon: Github,
       text: 'github.com/hardiksingh'
     }
   ];
@@ -77,7 +78,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 whileHover={{ x: 10 }}
               >
-                <i className={info.icon}></i>
+                <info.icon size={24} />
                 <span>{info.text}</span>
               </motion.div>
             ))}
