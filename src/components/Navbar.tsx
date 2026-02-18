@@ -1,22 +1,17 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 80);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
@@ -25,67 +20,53 @@ const Navbar = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
-    <motion.nav
-      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="nav-container">
-        <motion.div
-          className="nav-logo"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => scrollToSection('#home')}
+    <nav className={`navbar-pill ${isScrolled ? 'compact' : ''}`}>
+      <div className="navbar-inner">
+        <a
+          className="nav-brand"
+          href="#home"
+          onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
         >
-          <img src="/assets/logo.png" alt="Hardik Singh" />
-          <span>Hardik Singh</span>
-        </motion.div>
+          <span className="brand-full">Hardik Singh</span>
+          <span className="brand-mono">HS</span>
+        </a>
 
-        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          {navItems.map((item, index) => (
-            <motion.li
+        <div className="nav-links">
+          {navItems.map((item) => (
+            <a
               key={item.href}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              href={item.href}
+              className="nav-link"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.href);
+              }}
             >
-              <a
-                href={item.href}
-                className="nav-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-              >
-                {item.label}
-              </a>
-            </motion.li>
+              {item.label}
+            </a>
           ))}
-        </ul>
-
-        <div className="nav-actions">
-          <ThemeToggle />
-          <motion.div
-            className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            whileTap={{ scale: 0.9 }}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </motion.div>
         </div>
+
+        <a
+          href="/assets/resume.pdf"
+          className="btn-primary nav-cta"
+          download="Hardik_Singh_Resume.pdf"
+        >
+          Resume
+        </a>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

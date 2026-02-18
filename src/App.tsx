@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,27 +6,23 @@ import Projects from './components/Projects'
 import Writing from './components/Writing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import CursorFollower from './components/CursorFollower'
-import AmbientBackground from './components/AmbientBackground'
-import { useThemeStore } from './store/themeStore'
+import LatticeBackground from './components/LatticeBackground'
 
 function App() {
-  const { theme } = useThemeStore()
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
-
   return (
     <div className="App">
-      <AmbientBackground />
-      <CursorFollower />
+      <LatticeBackground />
       <Navbar />
       <Hero />
+      <hr className="divider" />
       <About />
+      <hr className="divider" />
       <Experience />
+      <hr className="divider" />
       <Projects />
+      <hr className="divider" />
       <Writing />
+      <hr className="divider" />
       <Contact />
       <Footer />
     </div>

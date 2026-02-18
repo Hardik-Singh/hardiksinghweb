@@ -1,99 +1,63 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Download } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
-  const footerLinks = [
-    { href: '#home', label: 'Home' },
+  const scrollToSection = (href: string) => {
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const navLinks = [
     { href: '#about', label: 'About' },
+    { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
-    { href: '/assets/resume.pdf', label: 'Resume', isDownload: true }
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#' },
-    { icon: Linkedin, href: '#' },
-    { icon: Twitter, href: '#' },
-    { icon: Download, href: '/assets/resume.pdf', isDownload: true }
+    { icon: Github, href: 'https://github.com/hardiksingh' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/hardiksingh' },
+    { icon: Twitter, href: 'https://twitter.com/hardiksingh' },
   ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="footer">
       <div className="container">
-        <motion.div
-          className="footer-content"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <motion.div
-            className="footer-logo"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        <div className="footer-row">
+          <span
+            className="footer-brand"
             onClick={() => scrollToSection('#home')}
           >
-            <img src="/assets/logo.png" alt="Hardik Singh" />
-            <span>Hardik Singh</span>
-          </motion.div>
+            Hardik Singh
+          </span>
 
           <div className="footer-links">
-            {footerLinks.map((link, index) => (
-              <motion.a
-                key={link.href + link.label}
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
                 href={link.href}
-                download={link.isDownload ? 'Hardik_Singh_Resume.pdf' : undefined}
-                onClick={link.isDownload ? undefined : (e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -2 }}
+                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
               >
                 {link.label}
-              </motion.a>
+              </a>
             ))}
           </div>
 
           <div className="footer-social">
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.href}
-                download={social.isDownload ? 'Hardik_Singh_Resume.pdf' : undefined}
-                title={social.isDownload ? 'Download Resume' : undefined}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <social.icon size={18} />
-              </motion.a>
+            {socialLinks.map((s, i) => (
+              <a key={i} href={s.href}>
+                <s.icon size={18} />
+              </a>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="footer-bottom"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
+        <div className="footer-bottom">
           <p>&copy; 2026 Hardik Singh. All rights reserved.</p>
-        </motion.div>
+        </div>
       </div>
     </footer>
   );
