@@ -18,8 +18,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/hardiksingh' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/hardiksingh' },
+    { icon: Github, href: 'https://github.com/Hardik-Singh' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/hardiksingh-hs' },
     { icon: Twitter, href: 'https://twitter.com/hardiksingh' },
   ];
 

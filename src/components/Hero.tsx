@@ -34,7 +34,7 @@ const Hero = () => {
         </h1>
 
         <p className="hero-subtitle">
-          Hardik Singh — SWE. Prev: Google · AWS · John Deere
+          Hardik Singh — the GOAT
         </p>
 
         <div className="hero-buttons">

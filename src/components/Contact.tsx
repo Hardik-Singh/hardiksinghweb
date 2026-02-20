@@ -21,8 +21,8 @@ const Contact = () => {
 
   const contactLinks = [
     { icon: Mail, text: 'hardikhssingh@gmail.com', href: 'mailto:hardikhssingh@gmail.com' },
-    { icon: Linkedin, text: 'LinkedIn', href: 'https://linkedin.com/in/hardiksingh' },
-    { icon: Github, text: 'GitHub', href: 'https://github.com/hardiksingh' },
+    { icon: Linkedin, text: 'LinkedIn', href: 'https://linkedin.com/in/hardiksingh-hs' },
+    { icon: Github, text: 'GitHub', href: 'https://github.com/Hardik-Singh' },
   ];
 
   return (

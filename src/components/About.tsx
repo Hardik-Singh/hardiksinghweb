@@ -3,21 +3,6 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const About = () => {
   const ref = useScrollReveal<HTMLElement>();
 
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'HTML5']
-    },
-    {
-      title: 'Backend',
-      skills: ['Python', 'Java', 'Node.js', 'C++']
-    },
-    {
-      title: 'Tools & Cloud',
-      skills: ['AWS', 'Docker', 'Git', 'TensorFlow']
-    }
-  ];
-
   return (
     <section id="about" className="section" ref={ref}>
       <div className="container reveal">
@@ -27,29 +12,16 @@ const About = () => {
         <div className="chunk-row">
           <div className="chunk-text">
             <p className="body-text">
-              I'm a software engineer with a deep passion for creating innovative solutions
-              and pushing the boundaries of what's possible with technology. My journey in
-              software development has led me through various domains including machine learning,
-              web development, and system architecture.
+              Someone who genuinely cares about doing things right. I'm obsessed with excellence
+              across every domain I touch, whether that's software, music, or anything else life
+              throws at me. I go deep, I learn constantly, and I bring that same intensity to everything.
+              I'm multidisciplinary by nature and I think the best ideas live at the intersection of fields.
             </p>
             <p className="body-text">
-              When I'm not coding, you'll find me exploring new technologies, contributing
-              to open-source projects, or diving into complex algorithmic challenges. I believe
-              in writing clean, maintainable code and creating user experiences that delight.
+              Beyond the work, I try to be someone who is kind, authentic, and good to be around.
+              I want to make a real impact and build things that matter. I don't chase greatness
+              as an idea. I just can't help it.
             </p>
-
-            <div className="skill-groups">
-              {skillCategories.map((category) => (
-                <div key={category.title} className="skill-group">
-                  <h4 className="skill-group-title">{category.title}</h4>
-                  <div className="skill-tags">
-                    {category.skills.map((skill) => (
-                      <span key={skill} className="skill-tag">{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="chunk-media">

@@ -51,8 +51,8 @@ const Projects = () => {
     },
     {
       id: 'cargo',
-      name: 'Cargo Management System',
-      description: 'Efficient cargo tracking and logistics management platform',
+      name: 'Cargo Connect',
+      description: 'Smart logistics marketplace that pairs trucks with unused cargo space to customers who need shipping, optimizing routes and reducing empty miles across the supply chain',
       background: 'linear-gradient(135deg, #8ECAE6 0%, #3094AC 100%)',
       tech: ['Java', 'Spring Boot', 'MySQL'],
       isPrivate: true
@@ -159,6 +159,22 @@ const Projects = () => {
       description: 'Local-first AI assistant that runs entirely on-device, combining voice control, screen context awareness, and tool orchestration to automate workflows without sending data to the cloud',
       background: 'linear-gradient(135deg, #7C4DFF 0%, #4A148C 100%)',
       tech: ['Python', 'FastAPI', 'LLM', 'Electron'],
+      isPrivate: true
+    },
+    {
+      id: 'connect-dev',
+      name: 'ConnectDev',
+      description: 'Mobile app connecting users with local businesses through discovery, verified reviews, ratings, and personalized recommendations — a hyperlocal alternative to Yelp',
+      background: 'linear-gradient(135deg, #FF7043 0%, #BF360C 100%)',
+      tech: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
+      isPrivate: true
+    },
+    {
+      id: 'secure-ed',
+      name: 'Secure Ed',
+      description: 'Campus threat intelligence platform built in collaboration with school faculty, providing real-time threat tracking, incident reporting, and risk assessment to keep educational environments safe',
+      background: 'linear-gradient(135deg, #37474F 0%, #1B2631 100%)',
+      tech: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
       isPrivate: true
     }
   ];
