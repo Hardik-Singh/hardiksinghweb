@@ -54,7 +54,7 @@ const About = () => {
 
           <div className="chunk-media">
             <div className="card about-photo-card">
-              <img src="/assets/me.PNG" alt="Hardik Singh" />
+              <img src="/assets/me.jpg" alt="Hardik Singh" />
             </div>
           </div>
         </div>
