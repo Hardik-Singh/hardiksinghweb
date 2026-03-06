@@ -38,7 +38,7 @@ const Invariance = () => {
               backends, you can verify what they actually did, not just what they said they did.
             </p>
             <a
-              href="https://invariance.com"
+              href="https://useinvariance.com"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
