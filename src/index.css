@@ -403,6 +403,47 @@ body {
   gap: 8px;
 }
 
+/* ─── Heroes ─── */
+.heroes-section {
+  margin-top: 64px;
+}
+
+.heroes-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.heroes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hero-card {
+  padding: 28px;
+}
+
+.hero-card-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.hero-card-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .heroes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── Experience ─── */
 .experience-stack {
   display: flex;

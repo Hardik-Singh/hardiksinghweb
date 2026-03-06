@@ -132,9 +132,41 @@ const Projects = () => {
     {
       id: 'rl-trading-agents',
       name: 'RL Trading Agents',
-      description: 'Autonomous reinforcement learning agents competing on a live order book exchange, using PPO and multi-agent self-play to discover emergent market-making and arbitrage strategies',
+      description: 'Suite of autonomous RL agents deployed on my custom C++ trading exchange, using PPO and multi-agent self-play to discover market-making, momentum, and arbitrage strategies on a live order book',
       background: 'linear-gradient(135deg, #00C853 0%, #007E33 100%)',
       tech: ['PyTorch', 'C++20', 'gRPC', 'Docker'],
+      isPrivate: true
+    },
+    {
+      id: 'alignment-experiments',
+      name: 'Alignment Experiments',
+      description: 'Collection of agent alignment research systems: government policy agents, restaurant recommendation agents, and other multi-agent simulations designed to study deceptive behavior, goal misalignment, and emergent cooperation under constrained environments',
+      background: 'linear-gradient(135deg, #EF5350 0%, #B71C1C 100%)',
+      tech: ['Python', 'PyTorch', 'LangChain', 'FastAPI'],
+      isPrivate: true
+    },
+    {
+      id: 'rl-finetuning',
+      name: 'RL Fine-Tuning Framework',
+      description: 'Framework for turning natural language specifications into RL training objectives. Supports rollout-based tuning, GRPO, custom reward shaping, and iterative policy refinement across language model architectures',
+      background: 'linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)',
+      tech: ['PyTorch', 'Transformers', 'PEFT', 'Weights & Biases'],
+      isPrivate: true
+    },
+    {
+      id: 'prediction-market-trader',
+      name: 'Prediction Market Trader',
+      description: 'Automated prediction market trading bot that identifies mispriced contracts, models event probabilities, and executes trades with Kelly criterion position sizing across multiple prediction platforms',
+      background: 'linear-gradient(135deg, #26A69A 0%, #00695C 100%)',
+      tech: ['Python', 'NumPy', 'PostgreSQL', 'WebSockets'],
+      isPrivate: true
+    },
+    {
+      id: 'crypto-traders',
+      name: 'Crypto Trading Bots',
+      description: 'Algorithmic crypto trading systems that generated $100K+ in returns. Bitcoin volatility strategies, simple pricing models, and automated execution across exchanges with real-time risk management',
+      background: 'linear-gradient(135deg, #FFA726 0%, #E65100 100%)',
+      tech: ['Python', 'ccxt', 'NumPy', 'Redis'],
       isPrivate: true
     },
     {
@@ -164,7 +196,7 @@ const Projects = () => {
     {
       id: 'connect-dev',
       name: 'ConnectDev',
-      description: 'Mobile app connecting users with local businesses through discovery, verified reviews, ratings, and personalized recommendations — a hyperlocal alternative to Yelp',
+      description: 'Mobile app connecting users with local businesses through discovery, verified reviews, ratings, and personalized recommendations. A hyperlocal alternative to Yelp',
       background: 'linear-gradient(135deg, #FF7043 0%, #BF360C 100%)',
       tech: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
       isPrivate: true

@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Invariance from './components/Invariance'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Writing from './components/Writing'
@@ -16,6 +17,8 @@ function App() {
       <Hero />
       <hr className="divider" />
       <About />
+      <hr className="divider" />
+      <Invariance />
       <hr className="divider" />
       <Experience />
       <hr className="divider" />

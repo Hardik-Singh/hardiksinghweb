@@ -34,7 +34,7 @@ const Hero = () => {
         </h1>
 
         <p className="hero-subtitle">
-          Hardik Singh — the GOAT
+          Hardik Singh
         </p>
 
         <div className="hero-buttons">
