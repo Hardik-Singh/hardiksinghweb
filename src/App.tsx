@@ -4,6 +4,7 @@ import About from './components/About'
 import Invariance from './components/Invariance'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Heroes from './components/Heroes'
 import Writing from './components/Writing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -23,6 +24,8 @@ function App() {
       <Experience />
       <hr className="divider" />
       <Projects />
+      <hr className="divider" />
+      <Heroes />
       <hr className="divider" />
       <Writing />
       <hr className="divider" />

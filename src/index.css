@@ -403,18 +403,49 @@ body {
   gap: 8px;
 }
 
+/* ─── Collapsible Sections ─── */
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--text-muted);
+  font-family: inherit;
+  text-align: left;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.collapsible-header:hover {
+  color: var(--accent);
+}
+
+.collapsible-header .section-label,
+.collapsible-header .section-heading {
+  pointer-events: none;
+}
+
+.collapsible-body {
+  overflow: hidden;
+  transition: max-height 0.5s var(--ease), opacity 0.4s var(--ease);
+}
+
+.collapsible-body.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.collapsible-body.expanded {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 36px;
+}
+
 /* ─── Heroes ─── */
-.heroes-section {
-  margin-top: 64px;
-}
-
-.heroes-heading {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.4rem;
-  color: var(--text);
-  margin-bottom: 24px;
-}
-
 .heroes-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

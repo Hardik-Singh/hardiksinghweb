@@ -10,51 +10,27 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 'infiniwell',
-      name: 'InfiniWell',
-      description: 'Advanced data processing and analytics platform with real-time insights',
-      background: 'linear-gradient(135deg, #c45d3e 0%, #e8879b 100%)',
-      tech: ['Python', 'TensorFlow', 'AWS'],
+      id: 'trading-exchange',
+      name: 'Trading Exchange',
+      description: 'High-performance limit order book matching engine built in C++20 with lock-free concurrency, achieving 5,000+ orders/sec with sub-1ms p99 latency',
+      background: 'linear-gradient(135deg, #2ECC71 0%, #1A7A42 100%)',
+      tech: ['C++20', 'Boost', 'pybind11', 'React'],
       isPrivate: true
     },
     {
-      id: 'loopit',
-      name: 'LoopIt',
-      description: 'Interactive loop visualization and optimization tool for developers',
-      background: 'linear-gradient(135deg, #7EC8E3 0%, #3D7EA6 100%)',
-      tech: ['JavaScript', 'HTML5', 'CSS3'],
+      id: 'rl-trading-agents',
+      name: 'RL Trading Agents',
+      description: 'Suite of autonomous RL agents deployed on my custom C++ trading exchange, using PPO and multi-agent self-play to discover market-making, momentum, and arbitrage strategies on a live order book',
+      background: 'linear-gradient(135deg, #00C853 0%, #007E33 100%)',
+      tech: ['PyTorch', 'C++20', 'gRPC', 'Docker'],
       isPrivate: true
     },
     {
-      id: 'virtuchat',
-      name: 'VirtuChat',
-      description: 'AI-powered virtual chat assistant with natural language processing',
-      background: 'linear-gradient(135deg, #A8D5A2 0%, #5FA35A 100%)',
-      tech: ['Python', 'TensorFlow', 'React'],
-      isPrivate: true
-    },
-    {
-      id: 'chaos-theory',
-      name: 'Chaos Theory Visualizer',
-      description: 'Mathematical visualization of chaos theory and fractal patterns',
-      background: 'linear-gradient(135deg, #F5C77E 0%, #D48B2A 100%)',
-      tech: ['Python', 'Matplotlib', 'NumPy'],
-      isPrivate: true
-    },
-    {
-      id: 'huffman',
-      name: 'Huffman Coding',
-      description: 'Data compression algorithm implementation with visualization',
-      background: 'linear-gradient(135deg, #C9A8E2 0%, #8752A8 100%)',
-      tech: ['C++', 'Data Structures', 'Algorithms'],
-      isPrivate: false
-    },
-    {
-      id: 'cargo',
-      name: 'Cargo Connect',
-      description: 'Smart logistics marketplace that pairs trucks with unused cargo space to customers who need shipping, optimizing routes and reducing empty miles across the supply chain',
-      background: 'linear-gradient(135deg, #8ECAE6 0%, #3094AC 100%)',
-      tech: ['Java', 'Spring Boot', 'MySQL'],
+      id: 'crypto-traders',
+      name: 'Crypto Trading Bots',
+      description: 'Algorithmic crypto trading systems that generated $100K+ in returns. Bitcoin volatility strategies, simple pricing models, and automated execution across exchanges with real-time risk management',
+      background: 'linear-gradient(135deg, #FFA726 0%, #E65100 100%)',
+      tech: ['Python', 'ccxt', 'NumPy', 'Redis'],
       isPrivate: true
     },
     {
@@ -66,11 +42,19 @@ const Projects = () => {
       isPrivate: true
     },
     {
-      id: 'trading-exchange',
-      name: 'Trading Exchange',
-      description: 'High-performance limit order book matching engine built in C++20 with lock-free concurrency, achieving 5,000+ orders/sec with sub-1ms p99 latency',
-      background: 'linear-gradient(135deg, #2ECC71 0%, #1A7A42 100%)',
-      tech: ['C++20', 'Boost', 'pybind11', 'React'],
+      id: 'rl-finetuning',
+      name: 'RL Fine-Tuning Framework',
+      description: 'Framework for turning natural language specifications into RL training objectives. Supports rollout-based tuning, GRPO, custom reward shaping, and iterative policy refinement across language model architectures',
+      background: 'linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)',
+      tech: ['PyTorch', 'Transformers', 'PEFT', 'Weights & Biases'],
+      isPrivate: true
+    },
+    {
+      id: 'alignment-experiments',
+      name: 'Alignment Experiments',
+      description: 'Collection of agent alignment research systems: government policy agents, restaurant recommendation agents, and other multi-agent simulations designed to study deceptive behavior, goal misalignment, and emergent cooperation under constrained environments',
+      background: 'linear-gradient(135deg, #EF5350 0%, #B71C1C 100%)',
+      tech: ['Python', 'PyTorch', 'LangChain', 'FastAPI'],
       isPrivate: true
     },
     {
@@ -79,6 +63,38 @@ const Projects = () => {
       description: 'Deep reinforcement learning poker agent using an AlphaHoldem-inspired Transformer architecture with Go and Rust game engines communicating over gRPC',
       background: 'linear-gradient(135deg, #E74C3C 0%, #8E2424 100%)',
       tech: ['PyTorch', 'Go', 'Rust', 'gRPC'],
+      isPrivate: true
+    },
+    {
+      id: 'prediction-market-trader',
+      name: 'Prediction Market Trader',
+      description: 'Automated prediction market trading bot that identifies mispriced contracts, models event probabilities, and executes trades with Kelly criterion position sizing across multiple prediction platforms',
+      background: 'linear-gradient(135deg, #26A69A 0%, #00695C 100%)',
+      tech: ['Python', 'NumPy', 'PostgreSQL', 'WebSockets'],
+      isPrivate: true
+    },
+    {
+      id: 'options-pricing',
+      name: 'Options Pricing Engine',
+      description: 'Quantitative options pricing model implementing Black-Scholes, Monte Carlo simulation, and binomial tree methods with real-time Greeks calculation and volatility surface visualization',
+      background: 'linear-gradient(135deg, #FFD700 0%, #B8960C 100%)',
+      tech: ['Python', 'NumPy', 'C++', 'React'],
+      isPrivate: true
+    },
+    {
+      id: 'visetta',
+      name: 'Visetta',
+      description: 'Local-first AI assistant that runs entirely on-device, combining voice control, screen context awareness, and tool orchestration to automate workflows without sending data to the cloud',
+      background: 'linear-gradient(135deg, #7C4DFF 0%, #4A148C 100%)',
+      tech: ['Python', 'FastAPI', 'LLM', 'Electron'],
+      isPrivate: true
+    },
+    {
+      id: 'copy-trading',
+      name: 'Copy Trading Bot',
+      description: 'Automated copy-trading system that mirrors top-performing traders in real time with configurable risk scaling, position sizing, and portfolio-level drawdown protection',
+      background: 'linear-gradient(135deg, #00BCD4 0%, #00838F 100%)',
+      tech: ['Python', 'WebSockets', 'PostgreSQL', 'Redis'],
       isPrivate: true
     },
     {
@@ -98,19 +114,27 @@ const Projects = () => {
       isPrivate: true
     },
     {
-      id: 'guitar-tab-editor',
-      name: 'Guitar Tab Editor',
-      description: 'Browser-based tablature editor with in-browser SQLite storage, support for playing techniques and finger annotations, and ML-assisted tab suggestions via TensorFlow.js',
-      background: 'linear-gradient(135deg, #F39C12 0%, #B7740E 100%)',
-      tech: ['React', 'SQLite', 'TensorFlow.js', 'Zustand'],
-      isPrivate: true
-    },
-    {
       id: 'bot-orchestration',
       name: 'Bot Orchestration',
       description: 'Slack-style interface demonstrating AI-driven multi-bot coordination with permission-gated execution, typing indicators, and cross-service workflow chaining',
       background: 'linear-gradient(135deg, #1ABC9C 0%, #0E7A64 100%)',
       tech: ['React', 'TypeScript', 'Tailwind CSS'],
+      isPrivate: true
+    },
+    {
+      id: 'secure-ed',
+      name: 'Secure Ed',
+      description: 'Campus threat intelligence platform built in collaboration with school faculty, providing real-time threat tracking, incident reporting, and risk assessment to keep educational environments safe',
+      background: 'linear-gradient(135deg, #37474F 0%, #1B2631 100%)',
+      tech: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
+      isPrivate: true
+    },
+    {
+      id: 'infiniwell',
+      name: 'InfiniWell',
+      description: 'Advanced data processing and analytics platform with real-time insights',
+      background: 'linear-gradient(135deg, #c45d3e 0%, #e8879b 100%)',
+      tech: ['Python', 'TensorFlow', 'AWS'],
       isPrivate: true
     },
     {
@@ -122,75 +146,19 @@ const Projects = () => {
       isPrivate: true
     },
     {
-      id: 'evite-circles',
-      name: 'Evite Circles',
-      description: 'Event invitation and social circle management app with circle-based contact grouping, event creation, RSVP tracking, and public invite landing pages',
-      background: 'linear-gradient(135deg, #E91E63 0%, #AD1457 100%)',
-      tech: ['React', 'TypeScript', 'React Router', 'Tailwind CSS'],
+      id: 'guitar-tab-editor',
+      name: 'Guitar Tab Editor',
+      description: 'Browser-based tablature editor with in-browser SQLite storage, support for playing techniques and finger annotations, and ML-assisted tab suggestions via TensorFlow.js',
+      background: 'linear-gradient(135deg, #F39C12 0%, #B7740E 100%)',
+      tech: ['React', 'SQLite', 'TensorFlow.js', 'Zustand'],
       isPrivate: true
     },
     {
-      id: 'rl-trading-agents',
-      name: 'RL Trading Agents',
-      description: 'Suite of autonomous RL agents deployed on my custom C++ trading exchange, using PPO and multi-agent self-play to discover market-making, momentum, and arbitrage strategies on a live order book',
-      background: 'linear-gradient(135deg, #00C853 0%, #007E33 100%)',
-      tech: ['PyTorch', 'C++20', 'gRPC', 'Docker'],
-      isPrivate: true
-    },
-    {
-      id: 'alignment-experiments',
-      name: 'Alignment Experiments',
-      description: 'Collection of agent alignment research systems: government policy agents, restaurant recommendation agents, and other multi-agent simulations designed to study deceptive behavior, goal misalignment, and emergent cooperation under constrained environments',
-      background: 'linear-gradient(135deg, #EF5350 0%, #B71C1C 100%)',
-      tech: ['Python', 'PyTorch', 'LangChain', 'FastAPI'],
-      isPrivate: true
-    },
-    {
-      id: 'rl-finetuning',
-      name: 'RL Fine-Tuning Framework',
-      description: 'Framework for turning natural language specifications into RL training objectives. Supports rollout-based tuning, GRPO, custom reward shaping, and iterative policy refinement across language model architectures',
-      background: 'linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)',
-      tech: ['PyTorch', 'Transformers', 'PEFT', 'Weights & Biases'],
-      isPrivate: true
-    },
-    {
-      id: 'prediction-market-trader',
-      name: 'Prediction Market Trader',
-      description: 'Automated prediction market trading bot that identifies mispriced contracts, models event probabilities, and executes trades with Kelly criterion position sizing across multiple prediction platforms',
-      background: 'linear-gradient(135deg, #26A69A 0%, #00695C 100%)',
-      tech: ['Python', 'NumPy', 'PostgreSQL', 'WebSockets'],
-      isPrivate: true
-    },
-    {
-      id: 'crypto-traders',
-      name: 'Crypto Trading Bots',
-      description: 'Algorithmic crypto trading systems that generated $100K+ in returns. Bitcoin volatility strategies, simple pricing models, and automated execution across exchanges with real-time risk management',
-      background: 'linear-gradient(135deg, #FFA726 0%, #E65100 100%)',
-      tech: ['Python', 'ccxt', 'NumPy', 'Redis'],
-      isPrivate: true
-    },
-    {
-      id: 'options-pricing',
-      name: 'Options Pricing Engine',
-      description: 'Quantitative options pricing model implementing Black-Scholes, Monte Carlo simulation, and binomial tree methods with real-time Greeks calculation and volatility surface visualization',
-      background: 'linear-gradient(135deg, #FFD700 0%, #B8960C 100%)',
-      tech: ['Python', 'NumPy', 'C++', 'React'],
-      isPrivate: true
-    },
-    {
-      id: 'copy-trading',
-      name: 'Copy Trading Bot',
-      description: 'Automated copy-trading system that mirrors top-performing traders in real time with configurable risk scaling, position sizing, and portfolio-level drawdown protection',
-      background: 'linear-gradient(135deg, #00BCD4 0%, #00838F 100%)',
-      tech: ['Python', 'WebSockets', 'PostgreSQL', 'Redis'],
-      isPrivate: true
-    },
-    {
-      id: 'visetta',
-      name: 'Visetta',
-      description: 'Local-first AI assistant that runs entirely on-device, combining voice control, screen context awareness, and tool orchestration to automate workflows without sending data to the cloud',
-      background: 'linear-gradient(135deg, #7C4DFF 0%, #4A148C 100%)',
-      tech: ['Python', 'FastAPI', 'LLM', 'Electron'],
+      id: 'cargo',
+      name: 'Cargo Connect',
+      description: 'Smart logistics marketplace that pairs trucks with unused cargo space to customers who need shipping, optimizing routes and reducing empty miles across the supply chain',
+      background: 'linear-gradient(135deg, #8ECAE6 0%, #3094AC 100%)',
+      tech: ['Java', 'Spring Boot', 'MySQL'],
       isPrivate: true
     },
     {
@@ -202,13 +170,45 @@ const Projects = () => {
       isPrivate: true
     },
     {
-      id: 'secure-ed',
-      name: 'Secure Ed',
-      description: 'Campus threat intelligence platform built in collaboration with school faculty, providing real-time threat tracking, incident reporting, and risk assessment to keep educational environments safe',
-      background: 'linear-gradient(135deg, #37474F 0%, #1B2631 100%)',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
+      id: 'virtuchat',
+      name: 'VirtuChat',
+      description: 'AI-powered virtual chat assistant with natural language processing',
+      background: 'linear-gradient(135deg, #A8D5A2 0%, #5FA35A 100%)',
+      tech: ['Python', 'TensorFlow', 'React'],
       isPrivate: true
-    }
+    },
+    {
+      id: 'evite-circles',
+      name: 'Evite Circles',
+      description: 'Event invitation and social circle management app with circle-based contact grouping, event creation, RSVP tracking, and public invite landing pages',
+      background: 'linear-gradient(135deg, #E91E63 0%, #AD1457 100%)',
+      tech: ['React', 'TypeScript', 'React Router', 'Tailwind CSS'],
+      isPrivate: true
+    },
+    {
+      id: 'chaos-theory',
+      name: 'Chaos Theory Visualizer',
+      description: 'Mathematical visualization of chaos theory and fractal patterns',
+      background: 'linear-gradient(135deg, #F5C77E 0%, #D48B2A 100%)',
+      tech: ['Python', 'Matplotlib', 'NumPy'],
+      isPrivate: true
+    },
+    {
+      id: 'loopit',
+      name: 'LoopIt',
+      description: 'Interactive loop visualization and optimization tool for developers',
+      background: 'linear-gradient(135deg, #7EC8E3 0%, #3D7EA6 100%)',
+      tech: ['JavaScript', 'HTML5', 'CSS3'],
+      isPrivate: true
+    },
+    {
+      id: 'huffman',
+      name: 'Huffman Coding',
+      description: 'Data compression algorithm implementation with visualization',
+      background: 'linear-gradient(135deg, #C9A8E2 0%, #8752A8 100%)',
+      tech: ['C++', 'Data Structures', 'Algorithms'],
+      isPrivate: false
+    },
   ];
 
   const visible = showAll ? projects : projects.slice(0, INITIAL_COUNT);

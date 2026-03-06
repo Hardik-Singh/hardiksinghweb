@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Experience = () => {
   const ref = useScrollReveal<HTMLElement>();
+  const [collapsed, setCollapsed] = useState(true);
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
 
   const toggleExpanded = (id: number) => {
@@ -65,9 +67,18 @@ const Experience = () => {
   return (
     <section id="experience" className="section" ref={ref}>
       <div className="container reveal">
-        <span className="section-label">Experience</span>
-        <h2 className="section-heading">Where I've worked</h2>
+        <button
+          className="collapsible-header"
+          onClick={() => setCollapsed(!collapsed)}
+        >
+          <div>
+            <span className="section-label">Experience</span>
+            <h2 className="section-heading" style={{ marginBottom: 0 }}>Where I've worked</h2>
+          </div>
+          {collapsed ? <ChevronDown size={24} /> : <ChevronUp size={24} />}
+        </button>
 
+        <div className={`collapsible-body ${collapsed ? 'collapsed' : 'expanded'}`}>
         <div className="experience-stack">
           {experiences.map((exp) => {
             const isExpanded = expandedIds.includes(exp.id);
@@ -112,6 +123,7 @@ const Experience = () => {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </section>
