@@ -4,7 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Experience = () => {
   const ref = useScrollReveal<HTMLElement>();
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
 
   const toggleExpanded = (id: number) => {

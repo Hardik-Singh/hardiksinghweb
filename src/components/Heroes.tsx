@@ -4,7 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Heroes = () => {
   const ref = useScrollReveal<HTMLElement>();
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <section id="heroes" className="section" ref={ref}>

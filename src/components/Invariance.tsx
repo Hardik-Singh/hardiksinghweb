@@ -4,7 +4,7 @@ import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Invariance = () => {
   const ref = useScrollReveal<HTMLElement>();
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <section id="invariance" className="section" ref={ref}>
