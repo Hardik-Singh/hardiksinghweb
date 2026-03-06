@@ -36,7 +36,7 @@ const Projects = () => {
     {
       id: 'alignment-sandbox',
       name: 'Alignment Sandbox',
-      description: 'Platform for training and evaluating LLM alignment algorithms with real-time RLHF visualization, supporting PPO, GRPO, and custom reward shaping strategies',
+      description: 'Interactive environment for red-teaming and stress-testing LLM behavior under adversarial prompts, measuring deception rates, sycophancy, and goal drift across model families with real-time dashboards',
       background: 'linear-gradient(135deg, #FF6B6B 0%, #C44D4D 100%)',
       tech: ['PyTorch', 'FastAPI', 'React', 'Docker'],
       isPrivate: true
@@ -44,7 +44,7 @@ const Projects = () => {
     {
       id: 'rl-finetuning',
       name: 'RL Fine-Tuning Framework',
-      description: 'Framework for turning natural language specifications into RL training objectives. Supports rollout-based tuning, GRPO, custom reward shaping, and iterative policy refinement across language model architectures',
+      description: 'Pipeline that compiles natural language reward descriptions into RL training loops. Generates rollouts, scores completions against custom reward models, and runs iterative policy refinement with PPO and GRPO',
       background: 'linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)',
       tech: ['PyTorch', 'Transformers', 'PEFT', 'Weights & Biases'],
       isPrivate: true
