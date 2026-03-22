@@ -9,8 +9,16 @@ import Writing from './components/Writing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LatticeBackground from './components/LatticeBackground'
+import PlaygroundPage from './pages/PlaygroundPage'
+import { useRoute } from './hooks/useRoute'
 
 function App() {
+  const { pathname } = useRoute()
+
+  if (pathname === '/playground/emailDCA') {
+    return <PlaygroundPage />
+  }
+
   return (
     <div className="App">
       <LatticeBackground />

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useRoute } from '../hooks/useRoute';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname, navigate } = useRoute();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,16 +19,35 @@ const Navbar = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#writing', label: 'Writing' },
     { href: '#contact', label: 'Contact' },
+    { href: '/playground/emailDCA', label: 'Playground' },
   ];
 
-  const scrollToSection = (href: string) => {
-    if (href === '#home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleNavClick = (href: string) => {
+    // Path-based navigation (e.g., /playground/emailDCA)
+    if (href.startsWith('/')) {
+      navigate(href);
       return;
     }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Hash link from the home page
+    if (href === '#home') {
+      if (pathname !== '/') {
+        navigate('/');
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+    // Hash link — if not on home, navigate there first
+    if (pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -35,8 +56,8 @@ const Navbar = () => {
       <div className="navbar-inner">
         <a
           className="nav-brand"
-          href="#home"
-          onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
+          href="/"
+          onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
         >
           <span className="brand-full">Hardik Singh</span>
           <span className="brand-mono">HS</span>
@@ -47,10 +68,10 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="nav-link"
+              className={`nav-link ${item.href === '/playground/emailDCA' && pathname === '/playground/emailDCA' ? 'active' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(item.href);
+                handleNavClick(item.href);
               }}
             >
               {item.label}

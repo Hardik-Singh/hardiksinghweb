@@ -240,6 +240,10 @@ body {
   color: var(--text);
 }
 
+.nav-link.active {
+  color: var(--accent);
+}
+
 .nav-cta {
   padding: 8px 20px;
   font-size: 0.82rem;
@@ -901,5 +905,385 @@ body {
     width: 100%;
     max-width: 280px;
     text-align: center;
+  }
+}
+
+/* ─── Playground ─── */
+.playground-page {
+  min-height: 100vh;
+  padding: 120px 0 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.playground-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.contrast-caption {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.typewriter-container {
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.typewriter-prefix {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.typewriter-cursor {
+  color: var(--accent);
+  font-weight: 300;
+  margin-left: 1px;
+  transition: opacity 0.1s;
+}
+
+.agent-graph-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px 16px;
+  position: relative;
+}
+
+.playground-bottom-row {
+  max-width: 900px;
+  margin: 24px auto 0;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ─── Signed Receipt ─── */
+.signed-receipt {
+  flex: 1;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.signed-receipt.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.signed-receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.signed-receipt-dot {
+  width: 7px;
+  height: 7px;
+  background: #e04040;
+  border-radius: 50%;
+}
+
+.signed-receipt-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signed-receipt-line {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.signed-receipt-key {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.signed-receipt-eq {
+  color: var(--text-muted);
+  opacity: 0.5;
+  margin: 0 4px;
+}
+
+.signed-receipt-value {
+  color: var(--text-muted);
+}
+
+/* ─── Legend ─── */
+.playground-legend {
+  flex: 0 0 auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.legend-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.legend-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.legend-hot {
+  border: 2px solid #3388ff;
+}
+
+.legend-available {
+  border: 1.5px dashed #ccc;
+}
+
+.legend-signed {
+  border: 2px solid #e04040;
+}
+
+.legend-diamond {
+  width: 10px;
+  height: 10px;
+  background: #fffbf0;
+  border: 1.5px solid #e6a817;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.legend-capsule {
+  display: inline-block;
+  padding: 1px 7px;
+  background: #f8f6f2;
+  border: 1px solid #e2ddd5;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-family: 'SF Mono', monospace;
+  color: #8a8578;
+  flex-shrink: 0;
+}
+
+/* ─── Replay Button ─── */
+.replay-btn {
+  padding: 10px 28px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Sora', sans-serif;
+  transition: all 0.3s var(--ease);
+}
+
+.replay-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(196, 93, 62, 0.2);
+}
+
+/* ─── Node Detail Panel ─── */
+.node-detail-panel {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  z-index: 10;
+  animation: node-detail-in 0.25s var(--ease);
+}
+
+@keyframes node-detail-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.node-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.node-detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.node-detail-type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.node-detail-type-badge.agent,
+.node-detail-type-badge.core {
+  background: #eef4ff;
+  color: #3388ff;
+}
+
+.node-detail-type-badge.input {
+  background: #f3f3f3;
+  color: #555;
+}
+
+.node-detail-type-badge.signed {
+  background: #fff0f0;
+  color: #c33;
+}
+
+.node-detail-type-badge.gate {
+  background: #fffbf0;
+  color: #b8860b;
+}
+
+.node-detail-type-badge.dim {
+  background: #f5f5f5;
+  color: #aaa;
+}
+
+.node-detail-name {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.node-detail-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.node-detail-close:hover {
+  color: var(--text);
+}
+
+.node-detail-body {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.node-detail-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.node-detail-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.node-detail-field {
+  display: flex;
+  gap: 6px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.node-detail-key {
+  color: var(--accent);
+  font-family: 'SF Mono', monospace;
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 52px;
+}
+
+.node-detail-val {
+  color: var(--text-muted);
+  font-family: 'SF Mono', monospace;
+}
+
+/* ─── Playground Responsive ─── */
+@media (max-width: 768px) {
+  .playground-page {
+    padding: 100px 0 40px;
+  }
+
+  .agent-graph-container {
+    padding: 16px 8px 8px;
+    border-radius: 12px;
+  }
+
+  .playground-bottom-row {
+    flex-direction: column;
+  }
+
+  .typewriter {
+    font-size: 0.78rem;
+    padding: 8px 16px;
   }
 }
