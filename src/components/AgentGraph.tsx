@@ -433,52 +433,6 @@ function getInvarianceFields(node: NodeDef) {
   return [...base, 'scope_hash', 'input_artifact_hashes', 'output_artifact_hashes', 'policy_snapshot_hash'];
 }
 
-function getInvarianceShape(node: NodeDef) {
-  const common = [
-    '    execution_id: "exec_01H9...",',
-    '    session_id: "sess_01H9...",',
-    `    node_id: "${node.id}",`,
-    `    node_type: "${node.type}",`,
-    '    agent_identity: "hardik/orchestrator",',
-    '    packet_hash: "blake3:5f2d...19ab",',
-    '    packet_sig: "ed25519:1af2...bb91",',
-    '    parent_hashes: ["blake3:c91e...10f4"],',
-    '    context_hash: "blake3:7ab3...f201",',
-    '    started_at: "2026-03-22T17:15:04.203Z",',
-    '    finished_at: "2026-03-22T17:15:04.611Z",',
-  ];
-
-  if (node.type === 'gate') {
-    return [
-      ...common,
-      '    policy_id: "external-send-approval-v2",',
-      '    approval_actor: "user:hardik",',
-      '    approval_sig: "ed25519:03de...fa11",',
-      '    decision_hash: "blake3:approval-42..."',
-    ];
-  }
-
-  if (node.type === 'signed' || node.type === 'dim_signed') {
-    return [
-      ...common,
-      `    tool_name: "${node.label}",`,
-      '    tool_args_hash: "blake3:args-918...",',
-      '    receipt_hash: "sha256:92be...1d03",',
-      '    previous_receipt_hash: "sha256:4c88...e201",',
-      '    ed25519_sig: "ed25519:9b2f...d84a",',
-      '    public_key_id: "pk_live_agent_01"',
-    ];
-  }
-
-  return [
-    ...common,
-    '    scope_hash: "blake3:scope-91a...",',
-    '    input_artifact_hashes: ["blake3:upstream-a3f...", "blake3:upstream-b7c..."],',
-    '    output_artifact_hashes: ["blake3:out-77d..."],',
-    '    policy_snapshot_hash: "blake3:policy-202..."'
-  ];
-}
-
 function ArrowHead({ id, color }: { id: string; color: string }) {
   return (
     <marker id={id} viewBox="0 0 10 7" refX="9" refY="3.5" markerWidth="7" markerHeight="5" orient="auto-start-reverse">
